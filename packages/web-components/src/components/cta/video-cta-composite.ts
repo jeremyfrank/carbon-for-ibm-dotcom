@@ -137,8 +137,8 @@ class C4DVideoCTAComposite extends ModalRenderMixin(
       this._videoDescription = videoDescription;
       this._ctaContents = ctaContents;
       if (ctaContents) {
-        if (!theme && ctaContents.hasAttribute('theme')) {
-          theme = ctaContents.getAttribute('theme');
+        if (!theme && ctaContents.hasAttribute('data-theme')) {
+          theme = ctaContents.getAttribute('data-theme');
         }
         const videoPlayerComposite = (
           this.modalRenderRoot as Element
@@ -148,10 +148,23 @@ class C4DVideoCTAComposite extends ModalRenderMixin(
         videoPlayerComposite.ctaElement = this._ctaContents;
       }
       if (theme) {
-        const lightboxVideoPlayer = (
-          this.modalRenderRoot?.parentElement as Element
-        ).querySelector(selectorVideoPlayer) as Element;
-        lightboxVideoPlayer.setAttribute('theme', theme);
+        const expressiveModalSelector = `${c4dPrefix}-expressive-modal`;
+        const modalParent = this.modalRenderRoot?.parentElement;
+        const videoPlayersInModal =
+          modalParent?.querySelectorAll(selectorVideoPlayer);
+
+        // The theme lives on the expressive modal wrapping each player.
+        const themeTargets = videoPlayersInModal?.length
+          ? Array.from(videoPlayersInModal, (player) =>
+              player.closest(expressiveModalSelector)
+            )
+          : // Fallback for an AEM issue rendering the modal composite alongside
+            // expressive modals: theme every expressive modal on the page.
+            document.querySelectorAll(expressiveModalSelector);
+
+        themeTargets.forEach((target) => {
+          target?.setAttribute('theme', theme);
+        });
       }
     }
   }
