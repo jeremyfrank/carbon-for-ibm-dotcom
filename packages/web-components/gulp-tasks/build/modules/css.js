@@ -53,7 +53,6 @@ const _cssStream = ({ banner }) =>
         includePaths: [
           path.resolve(__dirname, '../../../node_modules'),
           path.resolve(__dirname, '../../../../../node_modules'),
-          path.resolve(__dirname, '../../../../../node_modules/@carbon/styles/node_modules'),
         ],
       })
     )

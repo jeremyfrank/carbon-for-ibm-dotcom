@@ -14,15 +14,15 @@
   @extend :host(#{$prefix}-search);
 
   &[size='sm'] {
-    @extend .#{$prefix}--search--sm;
+    @extend .#{$prefix}--layout--size-sm;
   }
 
   &[size='md'] {
-    @extend .#{$prefix}--search--md;
+    @extend .#{$prefix}--layout--size-md;
   }
 
   &[size='lg'] {
-    @extend .#{$prefix}--search--lg;
+    @extend .#{$prefix}--layout--size-lg;
   }
 
   &[color-scheme='light'] {
