@@ -10,9 +10,9 @@
 import { LitElement, html, TemplateResult } from 'lit';
 import { state, property, query } from 'lit/decorators.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
-import ArrowRight16 from '@carbon/web-components/es/icons/arrow--right/16.js';
-import ArrowLeft16 from '@carbon/web-components/es/icons/arrow--left/16.js';
-import Wikis from '@carbon/web-components/es/icons/wikis/20.js';
+import ArrowRight16 from '@carbon/icons/es/arrow--right/16.js';
+import ArrowLeft16 from '@carbon/icons/es/arrow--left/16.js';
+import Wikis from '@carbon/icons/es/wikis/20.js';
 import ifNonEmpty from '@carbon/web-components/es/globals/directives/if-non-empty.js';
 import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
 import root from 'window-or-global';

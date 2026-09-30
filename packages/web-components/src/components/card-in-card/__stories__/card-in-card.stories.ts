@@ -17,7 +17,7 @@ import '../../video-player/video-player-container';
 import { html } from 'lit';
 import { ifDefined } from 'lit/directives/if-defined.js';
 import { boolean, select, text } from '@storybook/addon-knobs';
-import ArrowRight20 from '@carbon/web-components/es/icons/arrow--right/20.js';
+import ArrowRight20 from '@carbon/icons/es/arrow--right/20.js';
 
 import imgXlg16x9 from '../../../../.storybook/storybook-images/assets/1312/fpo--16x9--1312x738--005.jpg';
 import imgMd16x9 from '../../../../.storybook/storybook-images/assets/960/fpo--16x9--960x540--005.jpg';

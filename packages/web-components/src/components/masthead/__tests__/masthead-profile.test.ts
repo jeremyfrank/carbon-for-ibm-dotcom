@@ -9,8 +9,8 @@
 
 import { html, render } from 'lit/html.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
-import User20 from '@carbon/web-components/es/icons/user/20.js';
-import UserOnline20 from '@carbon/web-components/es/icons/user--online/20.js';
+import User20 from '@carbon/icons/es/user/20.js';
+import UserOnline20 from '@carbon/icons/es/user--online/20.js';
 import C4DMastheadProfile from '../masthead-profile';
 
 const template = (props?) => {

@@ -9,8 +9,8 @@
 
 import { html } from 'lit';
 import { text, boolean, select } from '@storybook/addon-knobs';
-import ArrowRight20 from '@carbon/web-components/es/icons/arrow--right/20.js';
-import Download20 from '@carbon/web-components/es/icons/download/20.js';
+import ArrowRight20 from '@carbon/icons/es/arrow--right/20.js';
+import Download20 from '@carbon/icons/es/download/20.js';
 
 import '../index';
 import '../../link-list/index';

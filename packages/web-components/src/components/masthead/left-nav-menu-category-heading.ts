@@ -10,8 +10,8 @@
 import { LitElement, html } from 'lit';
 import { state, property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
-import ArrowRight20 from '@carbon/web-components/es/icons/arrow--right/20.js';
-import ArrowLeft20 from '@carbon/web-components/es/icons/arrow--left/20.js';
+import ArrowRight20 from '@carbon/icons/es/arrow--right/20.js';
+import ArrowLeft20 from '@carbon/icons/es/arrow--left/20.js';
 import settings from '@carbon/ibmdotcom-utilities/es/utilities/settings/settings.js';
 import { carbonElement as customElement } from '@carbon/web-components/es/globals/decorators/carbon-element.js';
 import styles from './masthead.scss';

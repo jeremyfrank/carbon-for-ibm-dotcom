@@ -11,8 +11,8 @@ import { ifDefined } from 'lit/directives/if-defined.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { html } from 'lit';
 import { property, query, state } from 'lit/decorators.js';
-import Close20 from '@carbon/web-components/es/icons/close/20.js';
-import Search20 from '@carbon/web-components/es/icons/search/20.js';
+import Close20 from '@carbon/icons/es/close/20.js';
+import Search20 from '@carbon/icons/es/search/20.js';
 import CDSDropdown, {
   DROPDOWN_KEYBOARD_ACTION,
 } from '@carbon/web-components/es/components/dropdown/dropdown.js';

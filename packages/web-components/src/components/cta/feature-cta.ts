@@ -12,7 +12,7 @@ import { html } from 'lit';
 import { property } from 'lit/decorators.js';
 import settings from '@carbon/ibmdotcom-utilities/es/utilities/settings/settings.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
-import PlayFilled from '@carbon/web-components/es/icons/play--filled/32.js';
+import PlayFilled from '@carbon/icons/es/play--filled/32.js';
 import {
   formatVideoCaption,
   formatVideoDuration,

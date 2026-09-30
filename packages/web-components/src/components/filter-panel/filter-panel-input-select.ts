@@ -9,7 +9,7 @@
 
 import { LitElement, html } from 'lit';
 import { property } from 'lit/decorators.js';
-import Close from '@carbon/web-components/es/icons/close/16.js';
+import Close from '@carbon/icons/es/close/16.js';
 import FocusMixin from '@carbon/web-components/es/globals/mixins/focus.js';
 import settings from '@carbon/ibmdotcom-utilities/es/utilities/settings/settings.js';
 import StableSelectorMixin from '../../globals/mixins/stable-selector';

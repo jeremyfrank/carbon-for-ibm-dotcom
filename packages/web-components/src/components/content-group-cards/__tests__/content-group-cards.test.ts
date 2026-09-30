@@ -8,7 +8,7 @@
  */
 
 import { html, render } from 'lit/html.js';
-import ArrowRight20 from '@carbon/web-components/es/icons/arrow--right/20.js';
+import ArrowRight20 from '@carbon/icons/es/arrow--right/20.js';
 import '../../card/card-heading';
 import '../content-group-cards';
 import '../content-group-cards-item';

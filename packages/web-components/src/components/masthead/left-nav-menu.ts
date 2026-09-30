@@ -10,7 +10,7 @@
 import { LitElement, html } from 'lit';
 import { property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
-import ChevronDown16 from '@carbon/web-components/es/icons/chevron--down/16.js';
+import ChevronDown16 from '@carbon/icons/es/chevron--down/16.js';
 import FocusMixin from '@carbon/web-components/es/globals/mixins/focus.js';
 import settings from '@carbon/ibmdotcom-utilities/es/utilities/settings/settings.js';
 import styles from './masthead.scss';

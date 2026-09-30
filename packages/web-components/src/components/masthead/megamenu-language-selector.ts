@@ -11,7 +11,7 @@ import { LitElement, html } from 'lit';
 import { property, state } from 'lit/decorators.js';
 import settings from '@carbon/ibmdotcom-utilities/es/utilities/settings/settings.js';
 import StableSelectorMixin from '../../globals/mixins/stable-selector';
-import Wikis from '@carbon/web-components/es/icons/wikis/20.js';
+import Wikis from '@carbon/icons/es/wikis/20.js';
 import { carbonElement as customElement } from '@carbon/web-components/es/globals/decorators/carbon-element.js';
 import styles from './megamenu-language-selector.scss';
 

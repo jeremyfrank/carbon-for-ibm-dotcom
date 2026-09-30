@@ -11,7 +11,7 @@ import { LitElement, html } from 'lit';
 import { property } from 'lit/decorators.js';
 import HostListener from '@carbon/web-components/es/globals/decorators/host-listener.js';
 import HostListenerMixin from '@carbon/web-components/es/globals/mixins/host-listener.js';
-import ChevronLeft16 from '@carbon/web-components/es/icons/chevron--left/16.js';
+import ChevronLeft16 from '@carbon/icons/es/chevron--left/16.js';
 import FocusMixin from '@carbon/web-components/es/globals/mixins/focus.js';
 import { selectorTabbable } from '@carbon/web-components/es/globals/settings.js';
 import settings from '@carbon/ibmdotcom-utilities/es/utilities/settings/settings.js';

@@ -12,7 +12,7 @@ import { property, query, state } from 'lit/decorators.js';
 import { carbonElement as customElement } from '@carbon/web-components/es/globals/decorators/carbon-element.js';
 import settings from '@carbon/ibmdotcom-utilities/es/utilities/settings/settings.js';
 import C4DLinkWithIcon from '../link-with-icon/link-with-icon';
-import Error20 from '@carbon/web-components/es/icons/error/20.js';
+import Error20 from '@carbon/icons/es/error/20.js';
 import styles from './card.scss';
 
 const { prefix, stablePrefix: c4dPrefix } = settings;

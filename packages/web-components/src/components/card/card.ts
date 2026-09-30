@@ -10,8 +10,8 @@
 import { TemplateResult, html, LitElement } from 'lit';
 import { property, query, state } from 'lit/decorators.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
-import ArrowRight20 from '@carbon/web-components/es/icons/arrow--right/20.js';
-import ArrowLeft20 from '@carbon/web-components/es/icons/arrow--left/20.js';
+import ArrowRight20 from '@carbon/icons/es/arrow--right/20.js';
+import ArrowLeft20 from '@carbon/icons/es/arrow--left/20.js';
 import CDSLink from '@carbon/web-components/es/components/link/link.js';
 import markdownToHtml from '@carbon/ibmdotcom-utilities/es/utilities/markdownToHtml/markdownToHtml.js';
 import { carbonElement as customElement } from '@carbon/web-components/es/globals/decorators/carbon-element.js';

@@ -10,8 +10,8 @@
 import { classMap } from 'lit/directives/class-map.js';
 import { html } from 'lit';
 import { property, query, state } from 'lit/decorators.js';
-import CaretLeft20 from '@carbon/web-components/es/icons/caret--left/20.js';
-import CaretRight20 from '@carbon/web-components/es/icons/caret--right/20.js';
+import CaretLeft20 from '@carbon/icons/es/caret--left/20.js';
+import CaretRight20 from '@carbon/icons/es/caret--right/20.js';
 import CDSHeaderNav from '@carbon/web-components/es/components/ui-shell/header-nav.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
 import HostListener from '@carbon/web-components/es/globals/decorators/host-listener.js';

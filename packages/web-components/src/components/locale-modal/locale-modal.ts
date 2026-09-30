@@ -9,8 +9,8 @@
 
 import { html } from 'lit';
 import { property, state } from 'lit/decorators.js';
-import ArrowLeft20 from '@carbon/web-components/es/icons/arrow--left/20.js';
-import EarthFilled16 from '@carbon/web-components/es/icons/earth--filled/16.js';
+import ArrowLeft20 from '@carbon/icons/es/arrow--left/20.js';
+import EarthFilled16 from '@carbon/icons/es/earth--filled/16.js';
 import HostListener from '@carbon/web-components/es/globals/decorators/host-listener.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
 import { selectorTabbable } from '@carbon/web-components/es/globals/settings.js';

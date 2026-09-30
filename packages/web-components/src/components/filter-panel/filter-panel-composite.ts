@@ -9,7 +9,7 @@
 
 import { html, LitElement, TemplateResult } from 'lit';
 import { property, state, query } from 'lit/decorators.js';
-import Filter from '@carbon/web-components/es/icons/filter/16.js';
+import Filter from '@carbon/icons/es/filter/16.js';
 import HostListenerMixin from '@carbon/web-components/es/globals/mixins/host-listener.js';
 import './filter-group';
 import './filter-panel';

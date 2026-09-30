@@ -14,7 +14,7 @@ import imgXlg16x9 from '../../../../../.storybook/storybook-images/assets/1312/f
 import imgMd16x9 from '../../../../../.storybook/storybook-images/assets/960/fpo--16x9--960x540--005.jpg';
 import imgLg4x3 from '../../../../../.storybook/storybook-images/assets/720/fpo--4x3--720x540--004.jpg';
 import imgSm4x3 from '../../../../../.storybook/storybook-images/assets/480/fpo--4x3--480x360--005.jpg';
-import ArrowRight20 from '@carbon/web-components/es/icons/arrow--right/20.js';
+import ArrowRight20 from '@carbon/icons/es/arrow--right/20.js';
 
 export const cardGroupItem1 = html`
   <c4d-card-group-item href="https://www.example.com">

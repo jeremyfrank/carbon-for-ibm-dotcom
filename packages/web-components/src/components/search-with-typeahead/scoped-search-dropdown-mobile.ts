@@ -7,7 +7,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import Filter20 from '@carbon/web-components/es/icons/filter/20.js';
+import Filter20 from '@carbon/icons/es/filter/20.js';
 import { html } from 'lit';
 import { property } from 'lit/decorators.js';
 import CDSSelect from '@carbon/web-components/es/components/select/select.js';

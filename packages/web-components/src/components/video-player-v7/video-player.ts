@@ -12,8 +12,8 @@ import { property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import FocusMixin from '@carbon/web-components/es/globals/mixins/focus.js';
 import PlayVideo from '../../../es/icons/play-video.js';
-import PlayOutline from '@carbon/web-components/es/icons/play--outline/20.js';
-import PauseOutline from '@carbon/web-components/es/icons/pause--outline/20.js';
+import PlayOutline from '@carbon/icons/es/play--outline/20.js';
+import PauseOutline from '@carbon/icons/es/pause--outline/20.js';
 import {
   formatVideoCaption,
   formatVideoDuration,
