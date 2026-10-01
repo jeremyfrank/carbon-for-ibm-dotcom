@@ -12,6 +12,7 @@ import '@carbon/web-components/es/components/tag/tag.js';
 import '../index';
 import { boolean, select } from '@storybook/addon-knobs';
 import ArrowRight20 from '@carbon/icons/es/arrow--right/20.js';
+import iconLoader from '@carbon/web-components/es/globals/internal/icon-loader.js';
 import { html } from 'lit';
 import { ifDefined } from 'lit/directives/if-defined.js';
 import imgXlg4x3 from '../../../../.storybook/storybook-images/assets/1312/fpo--4x3--1312x984--003.jpg';
@@ -307,7 +308,7 @@ export const Static = (args) => {
       ${cta
         ? html`
             <c4d-card-footer href="https://www.example.com">
-              ${ctaCopy}${ArrowRight20({ slot: 'icon' })}
+              ${ctaCopy}${iconLoader(ArrowRight20, { slot: 'icon' })}
             </c4d-card-footer>
           `
         : ``}

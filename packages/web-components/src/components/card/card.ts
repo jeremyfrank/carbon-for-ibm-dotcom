@@ -10,6 +10,7 @@
 import { TemplateResult, html, LitElement } from 'lit';
 import { property, query, state } from 'lit/decorators.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
+import iconLoader from '@carbon/web-components/es/globals/internal/icon-loader.js';
 import ArrowRight20 from '@carbon/icons/es/arrow--right/20.js';
 import ArrowLeft20 from '@carbon/icons/es/arrow--left/20.js';
 import CDSLink from '@carbon/web-components/es/components/link/link.js';
@@ -286,7 +287,7 @@ class C4DCard extends CTAMixin(StableSelectorMixin(CDSLink)) {
         href="${ifDefined(this.href)}"
         aria-label="${this.querySelector(`${c4dPrefix}-card-heading`)
           ?.textContent || ''}"
-        >${isLTR ? ArrowRight20() : ArrowLeft20()}</a
+        >${isLTR ? iconLoader(ArrowRight20) : iconLoader(ArrowLeft20)}</a
       >
     `;
   }

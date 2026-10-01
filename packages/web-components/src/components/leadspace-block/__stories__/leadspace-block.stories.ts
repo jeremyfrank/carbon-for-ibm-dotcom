@@ -11,6 +11,7 @@ import { html } from 'lit';
 import { text, boolean, select } from '@storybook/addon-knobs';
 import ArrowRight20 from '@carbon/icons/es/arrow--right/20.js';
 import Download20 from '@carbon/icons/es/download/20.js';
+import iconLoader from '@carbon/web-components/es/globals/internal/icon-loader.js';
 
 import '../index';
 import '../../link-list/index';
@@ -45,13 +46,13 @@ const linkList = html`
   <c4d-link-list>
     <c4d-link-list-heading>Featured products</c4d-link-list-heading>
     <c4d-link-list-item href="https://example.com">
-      IBM Cloud Continuous Delivery ${ArrowRight20({ slot: 'icon' })}
+      IBM Cloud Continuous Delivery ${iconLoader(ArrowRight20, { slot: 'icon' })}
     </c4d-link-list-item>
     <c4d-link-list-item href="https://example.com">
-      UrbanCode ${ArrowRight20({ slot: 'icon' })}
+      UrbanCode ${iconLoader(ArrowRight20, { slot: 'icon' })}
     </c4d-link-list-item>
     <c4d-link-list-item href="https://example.com">
-      View all products ${Download20({ slot: 'icon' })}
+      View all products ${iconLoader(Download20, { slot: 'icon' })}
     </c4d-link-list-item>
   </c4d-link-list>
 `;

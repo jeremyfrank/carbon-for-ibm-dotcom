@@ -13,6 +13,7 @@ import CDSLink from '@carbon/web-components/es/components/link/link.js';
 import HostListener from '@carbon/web-components/es/globals/decorators/host-listener.js';
 import HostListenerMixin from '@carbon/web-components/es/globals/mixins/host-listener.js';
 import FocusMixin from '@carbon/web-components/es/globals/mixins/focus.js';
+import iconLoader from '@carbon/web-components/es/globals/internal/icon-loader.js';
 import IBM8BarLogoH23 from '../../../es/icons/IBM-8bar-logo--h23.js';
 import settings from '@carbon/ibmdotcom-utilities/es/utilities/settings/settings.js';
 import styles from './masthead.scss';
@@ -125,7 +126,7 @@ class C4DMastheadLogo extends FocusMixin(
               src="${this.customLogoPath}"
               alt="${this.customLogoAlt || 'Logo'}"
               part="custom-logo-masthead" />`
-          : IBM8BarLogoH23()}
+          : iconLoader(IBM8BarLogoH23)}
       </slot>
     `;
   }

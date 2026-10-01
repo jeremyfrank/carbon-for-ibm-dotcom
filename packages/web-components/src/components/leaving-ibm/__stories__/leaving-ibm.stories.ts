@@ -10,6 +10,7 @@
 import { html } from 'lit';
 import { text, select } from '@storybook/addon-knobs';
 import Launch20 from '@carbon/icons/es/launch/20.js';
+import iconLoader from '@carbon/web-components/es/globals/internal/icon-loader.js';
 import styles from './leaving-ibm.stories.scss';
 import mediumImgLg1x1 from '../../../../.storybook/storybook-images/assets/720/fpo--1x1--720x720--004.jpg';
 import '../index';
@@ -30,7 +31,7 @@ export const Default = (args) => {
             icon-placement="right"
             href="${href}"
             data-leaving-ibm>
-            ${ctaText}${Launch20({ slot: 'icon' })}
+            ${ctaText}${iconLoader(Launch20, { slot: 'icon' })}
           </c4d-link-with-icon>
         `
       : null}
@@ -38,7 +39,7 @@ export const Default = (args) => {
       ? html`
           <c4d-button-group>
             <c4d-button-group-item href="${href}" data-leaving-ibm>
-              ${ctaText}${Launch20({ slot: 'icon' })}
+              ${ctaText}${iconLoader(Launch20, { slot: 'icon' })}
             </c4d-button-group-item>
           </c4d-button-group>
         `
@@ -48,7 +49,7 @@ export const Default = (args) => {
           <c4d-card-link href="${href}" data-leaving-ibm>
             <c4d-card-link-heading>${ctaText}</c4d-card-link-heading>
             <p>Lorem ipsum dolor sit</p>
-            <c4d-card-footer> ${Launch20({ slot: 'icon' })} </c4d-card-footer>
+            <c4d-card-footer> ${iconLoader(Launch20, { slot: 'icon' })} </c4d-card-footer>
           </c4d-card-link>
         `
       : null}
@@ -61,7 +62,7 @@ export const Default = (args) => {
               default-src="${mediumImgLg1x1}"></c4d-image>
             <c4d-card-heading>${ctaText}</c4d-card-heading>
             <c4d-feature-card-footer>
-              ${Launch20({ slot: 'icon' })}
+              ${iconLoader(Launch20, { slot: 'icon' })}
             </c4d-feature-card-footer>
           </c4d-feature-card>
         `

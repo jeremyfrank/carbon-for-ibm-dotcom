@@ -8,6 +8,7 @@
  */
 
 import { html } from 'lit-element';
+import iconLoader from '@carbon/web-components/es/globals/internal/icon-loader.js';
 import imgLg1x1 from '../../../../../.storybook/storybook-images/assets/960/fpo--1x1--960x960--006.jpg';
 import imgLg16x9 from '../../../../../.storybook/storybook-images/assets/720/fpo--16x9--720x405--005.jpg';
 import imgXlg16x9 from '../../../../../.storybook/storybook-images/assets/1312/fpo--16x9--1312x738--005.jpg';
@@ -27,7 +28,7 @@ export const cardGroupItem1 = html`
       tempor incididunt ut labore et dolore magna aliqua.
     </p>
     <c4d-card-footer icon-placement="left">
-      ${ArrowRight20({ slot: 'icon' })}
+      ${iconLoader(ArrowRight20, { slot: 'icon' })}
     </c4d-card-footer>
   </c4d-card-group-item>
 `;
@@ -40,7 +41,7 @@ export const cardGroupItem2 = html`
     </c4d-card-heading>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
     <c4d-card-footer icon-placement="left">
-      ${ArrowRight20({ slot: 'icon' })}
+      ${iconLoader(ArrowRight20, { slot: 'icon' })}
     </c4d-card-footer>
   </c4d-card-group-item>
 `;

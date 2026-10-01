@@ -8,6 +8,7 @@
 
 import { html } from 'lit';
 import ArrowRight20 from '@carbon/icons/es/arrow--right/20.js';
+import iconLoader from '@carbon/web-components/es/globals/internal/icon-loader.js';
 import logosGroup from '../../../logo-grid/__stories__/data/logos.js';
 import { TOC_TYPES } from '../../../table-of-contents/defs';
 
@@ -149,7 +150,7 @@ export const cardGroupItems = html`
     </c4d-image>
     <c4d-card-eyebrow>Topic</c4d-card-eyebrow>
     <c4d-card-heading>Natural Language Processing.</c4d-card-heading>
-    <c4d-card-footer> ${ArrowRight20({ slot: 'icon' })} </c4d-card-footer>
+    <c4d-card-footer> ${iconLoader(ArrowRight20, { slot: 'icon' })} </c4d-card-footer>
   </c4d-card-group-item>
 `;
 
@@ -219,13 +220,13 @@ export const tocContent = html`
       <c4d-link-list type="end">
         <c4d-link-list-heading>Featured products</c4d-link-list-heading>
         <c4d-link-list-item href="https://example.com">
-          IBM Cloud Continuous Delivery ${ArrowRight20({ slot: 'icon' })}
+          IBM Cloud Continuous Delivery ${iconLoader(ArrowRight20, { slot: 'icon' })}
         </c4d-link-list-item>
         <c4d-link-list-item href="https://example.com">
-          UrbanCode ${ArrowRight20({ slot: 'icon' })}
+          UrbanCode ${iconLoader(ArrowRight20, { slot: 'icon' })}
         </c4d-link-list-item>
         <c4d-link-list-item href="https://example.com">
-          View all products ${ArrowRight20({ slot: 'icon' })}
+          View all products ${iconLoader(ArrowRight20, { slot: 'icon' })}
         </c4d-link-list-item>
       </c4d-link-list>
       <c4d>
@@ -256,7 +257,7 @@ export const tocContent = html`
       morbu tristique.
     </p>
     <c4d-feature-card-footer>
-      ${ArrowRight20({ slot: 'icon' })}
+      ${iconLoader(ArrowRight20, { slot: 'icon' })}
     </c4d-feature-card-footer>
   </c4d-feature-card>
 
@@ -341,10 +342,10 @@ export const tocContent = html`
     >
     <c4d-button-group slot="action">
       <c4d-button-group-item href="https://example.com">
-        Secondary Button ${ArrowRight20({ slot: 'icon' })}
+        Secondary Button ${iconLoader(ArrowRight20, { slot: 'icon' })}
       </c4d-button-group-item>
       <c4d-button-group-item href="https://example.com">
-        Primary button ${ArrowRight20({ slot: 'icon' })}
+        Primary button ${iconLoader(ArrowRight20, { slot: 'icon' })}
       </c4d-button-group-item>
     </c4d-button-group>
     <c4d-cta-block-item-row no-border>
@@ -456,7 +457,7 @@ export const StoryContentNoToC = () =>
             Habitant morbu tristique.
           </p>
           <c4d-feature-card-footer>
-            ${ArrowRight20({ slot: 'icon' })}
+            ${iconLoader(ArrowRight20, { slot: 'icon' })}
           </c4d-feature-card-footer>
         </c4d-feature-card>
 
@@ -549,10 +550,10 @@ export const StoryContentNoToC = () =>
 
           <c4d-button-group slot="action">
             <c4d-button-group-item href="https://example.com">
-              Secondary Button ${ArrowRight20({ slot: 'icon' })}
+              Secondary Button ${iconLoader(ArrowRight20, { slot: 'icon' })}
             </c4d-button-group-item>
             <c4d-button-group-item href="https://example.com">
-              Primary button ${ArrowRight20({ slot: 'icon' })}
+              Primary button ${iconLoader(ArrowRight20, { slot: 'icon' })}
             </c4d-button-group-item>
           </c4d-button-group>
 

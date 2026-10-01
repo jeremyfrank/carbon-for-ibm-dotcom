@@ -12,6 +12,7 @@ import { LitElement, html } from 'lit';
 import { property, query } from 'lit/decorators.js';
 import User20 from '@carbon/icons/es/user/20.js';
 import UserOnline20 from '@carbon/icons/es/user--online/20.js';
+import iconLoader from '@carbon/web-components/es/globals/internal/icon-loader.js';
 import FocusMixin from '@carbon/web-components/es/globals/mixins/focus.js';
 import HostListenerMixin from '@carbon/web-components/es/globals/mixins/host-listener.js';
 import HostListener from '@carbon/web-components/es/globals/decorators/host-listener.js';
@@ -122,7 +123,7 @@ class C4DMastheadProfile extends HostListenerMixin(
         aria-expanded="${String(Boolean(expanded))}"
         aria-label="${ifDefined(triggerLabel)}"
         @click=${handleClick}>
-        ${authenticated ? UserOnline20() : User20()}
+        ${authenticated ? iconLoader(UserOnline20) : iconLoader(User20)}
       </a>
       <ul
         class="${prefix}--header__menu"

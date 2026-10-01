@@ -9,6 +9,7 @@
 
 import { html } from 'lit';
 import { property } from 'lit/decorators.js';
+import iconLoader from '@carbon/web-components/es/globals/internal/icon-loader.js';
 import ArrowDown20 from '@carbon/icons/es/arrow--down/20.js';
 import ArrowLeft20 from '@carbon/icons/es/arrow--left/20.js';
 import ArrowRight20 from '@carbon/icons/es/arrow--right/20.js';
@@ -215,10 +216,10 @@ const CTAMixin = <T extends Constructor<HTMLElement>>(Base: T) => {
           <span class="${prefix}--visually-hidden" part="icon-visually-hidden"
             >${ariaLabels[ctaType]}</span
           >
-          ${icon?.({
+          ${icon ? iconLoader(icon, {
             class: `${c4dPrefix}--card__cta ${c4dPrefix}-ce--cta__icon`,
             part: 'cta-icon',
-          })}
+          }) : ''}
         </slot>
       `;
     }

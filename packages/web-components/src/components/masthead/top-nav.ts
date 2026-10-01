@@ -12,6 +12,7 @@ import { html } from 'lit';
 import { property, query, state } from 'lit/decorators.js';
 import CaretLeft20 from '@carbon/icons/es/caret--left/20.js';
 import CaretRight20 from '@carbon/icons/es/caret--right/20.js';
+import iconLoader from '@carbon/web-components/es/globals/internal/icon-loader.js';
 import CDSHeaderNav from '@carbon/web-components/es/components/ui-shell/header-nav.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
 import HostListener from '@carbon/web-components/es/globals/decorators/host-listener.js';
@@ -568,7 +569,7 @@ class C4DTopNav extends StableSelectorMixin(HostListenerMixin(CDSHeaderNav)) {
                     aria-hidden="true"
                     class="${prefix}--header__nav-caret-right"
                     @click="${paginateRight}">
-                    ${CaretLeft20()}
+                    ${iconLoader(CaretLeft20)}
                   </button>
                 </div>
                 <div
@@ -607,7 +608,7 @@ class C4DTopNav extends StableSelectorMixin(HostListenerMixin(CDSHeaderNav)) {
                     aria-hidden="true"
                     class="${prefix}--header__nav-caret-left"
                     @click="${paginateLeft}">
-                    ${CaretRight20()}
+                    ${iconLoader(CaretRight20)}
                   </button>
                   <div
                     part="header-nav-caret-left-gradient"
@@ -624,7 +625,7 @@ class C4DTopNav extends StableSelectorMixin(HostListenerMixin(CDSHeaderNav)) {
                     aria-hidden="true"
                     class="${prefix}--header__nav-caret-left"
                     @click="${paginateLeft}">
-                    ${CaretLeft20()}
+                    ${iconLoader(CaretLeft20)}
                   </button>
                   <div
                     part="header_nav-caret-left-gradient"
@@ -669,7 +670,7 @@ class C4DTopNav extends StableSelectorMixin(HostListenerMixin(CDSHeaderNav)) {
                     aria-hidden="true"
                     class="${prefix}--header__nav-caret-right"
                     @click="${paginateRight}">
-                    ${CaretRight20()}
+                    ${iconLoader(CaretRight20)}
                   </button>
                 </div>
               `}

@@ -9,6 +9,7 @@
 
 import { html } from 'lit';
 import ArrowRight20 from '@carbon/icons/es/arrow--right/20.js';
+import iconLoader from '@carbon/web-components/es/globals/internal/icon-loader.js';
 import '../index';
 import textNullable from '../../../../.storybook/knob-text-nullable';
 import readme from './README.stories.mdx';
@@ -21,22 +22,22 @@ export const Default = (args) => {
       <c4d-link-list>
         <c4d-link-list-item href="https://example.com">
           Learn more about Kubernetes and automating deployment
-          ${ArrowRight20({ slot: 'icon' })}
+          ${iconLoader(ArrowRight20, { slot: 'icon' })}
         </c4d-link-list-item>
         <c4d-link-list-item href="https://example.com">
-          Containerization A Complete Guide ${ArrowRight20({ slot: 'icon' })}
+          Containerization A Complete Guide ${iconLoader(ArrowRight20, { slot: 'icon' })}
         </c4d-link-list-item>
         <c4d-link-list-item href="https://example.com">
-          Microservices and containers ${ArrowRight20({ slot: 'icon' })}
+          Microservices and containers ${iconLoader(ArrowRight20, { slot: 'icon' })}
         </c4d-link-list-item>
         <c4d-link-list-item href="https://example.com">
-          Learn more about Kubernetes ${ArrowRight20({ slot: 'icon' })}
+          Learn more about Kubernetes ${iconLoader(ArrowRight20, { slot: 'icon' })}
         </c4d-link-list-item>
         <c4d-link-list-item href="https://example.com">
-          Containerization A Complete Guide ${ArrowRight20({ slot: 'icon' })}
+          Containerization A Complete Guide ${iconLoader(ArrowRight20, { slot: 'icon' })}
         </c4d-link-list-item>
         <c4d-link-list-item href="https://example.com">
-          Microservices and containers ${ArrowRight20({ slot: 'icon' })}
+          Microservices and containers ${iconLoader(ArrowRight20, { slot: 'icon' })}
         </c4d-link-list-item>
       </c4d-link-list>
     </c4d-link-list-section>

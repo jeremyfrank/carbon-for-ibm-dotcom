@@ -15,6 +15,7 @@ import CDSDropdown, {
   DROPDOWN_TYPE,
   NAVIGATION_DIRECTION,
 } from '@carbon/web-components/es/components/dropdown/dropdown.js';
+import iconLoader from '@carbon/web-components/es/globals/internal/icon-loader.js';
 import Close16 from '@carbon/icons/es/close/16.js';
 import settings from '@carbon/ibmdotcom-utilities/es/utilities/settings/settings.js';
 import { findIndex, forEach } from '../../globals/internal/collection-helpers';
@@ -209,7 +210,7 @@ class C4DComboBox extends CDSDropdown {
             class="${prefix}--list-box__selection"
             tabindex="0"
             title="${clearSelectionLabel}">
-            ${Close16({ 'aria-label': clearSelectionLabel })}
+            ${iconLoader(Close16, { 'aria-label': clearSelectionLabel })}
           </div>
         `;
   }

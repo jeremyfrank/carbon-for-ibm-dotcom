@@ -11,6 +11,7 @@ import { ifDefined } from 'lit/directives/if-defined.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { html } from 'lit';
 import { property, query, state } from 'lit/decorators.js';
+import iconLoader from '@carbon/web-components/es/globals/internal/icon-loader.js';
 import Close20 from '@carbon/icons/es/close/20.js';
 import Search20 from '@carbon/icons/es/search/20.js';
 import CDSDropdown, {
@@ -975,7 +976,7 @@ class C4DSearchWithTypeahead extends HostListenerMixin(
                 class="${prefix}--header__action ${prefix}--header__search--search"
                 aria-label="${searchButtonAssistiveText}"
                 @click="${handleClickSearchButton}">
-                ${Search20()}
+                ${iconLoader(Search20)}
               </button>
               <button
                 type="button"
@@ -983,7 +984,7 @@ class C4DSearchWithTypeahead extends HostListenerMixin(
                 class="${prefix}--header__action ${prefix}--header__search--close"
                 aria-label="${closeSearchButtonAssistiveText}"
                 @click="${handleClickCloseButton}">
-                ${Close20()}
+                ${iconLoader(Close20)}
               </button>
             </div>
           `
@@ -991,7 +992,7 @@ class C4DSearchWithTypeahead extends HostListenerMixin(
             <div
               part="header-search-actions"
               class="${prefix}--header__search--actions">
-              ${Search20({
+              ${iconLoader(Search20, {
                 part: 'search-icon',
                 class: `${prefix}--search-magnifier-icon`,
                 role: 'img',
@@ -1006,7 +1007,7 @@ class C4DSearchWithTypeahead extends HostListenerMixin(
                   : ''}"
                 aria-label="${closeSearchButtonAssistiveText}"
                 @click="${handleClickCloseButton}">
-                ${Close20()}
+                ${iconLoader(Close20)}
               </button>
             </div>
             <div

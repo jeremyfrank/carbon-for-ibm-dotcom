@@ -10,6 +10,7 @@
 import { LitElement, html } from 'lit';
 import { state, property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
+import iconLoader from '@carbon/web-components/es/globals/internal/icon-loader.js';
 import ArrowRight20 from '@carbon/icons/es/arrow--right/20.js';
 import ArrowLeft20 from '@carbon/icons/es/arrow--left/20.js';
 import settings from '@carbon/ibmdotcom-utilities/es/utilities/settings/settings.js';
@@ -67,7 +68,7 @@ class C4DLeftNavMenuCategoryHeading extends LitElement {
               data-attribute1="headerNav"
               data-attribute2="FlatHdline"
               data-attribute3="${headingText}">
-              ${headingText}${isRTL ? ArrowLeft20() : ArrowRight20()}
+              ${headingText}${isRTL ? iconLoader(ArrowLeft20) : iconLoader(ArrowRight20)}
             </a>
           </h2>
         `

@@ -9,6 +9,7 @@
 
 import { html, render } from 'lit/html.js';
 import ArrowRight20 from '@carbon/icons/es/arrow--right/20.js';
+import iconLoader from '@carbon/web-components/es/globals/internal/icon-loader.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
 import '../../card/card-heading';
 import '../card-section-simple';
@@ -46,7 +47,7 @@ describe('c4d-card-section-simple', function () {
                 libero.
               </p>
               <c4d-card-footer>
-                ${ArrowRight20({ slot: 'icon' })}
+                ${iconLoader(ArrowRight20, { slot: 'icon' })}
               </c4d-card-footer>
             </c4d-card-group-item>
           `,

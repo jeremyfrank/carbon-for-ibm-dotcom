@@ -11,6 +11,7 @@ import { classMap } from 'lit/directives/class-map.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
 import { html, LitElement } from 'lit';
 import { property, query, queryAll, state } from 'lit/decorators.js';
+import iconLoader from '@carbon/web-components/es/globals/internal/icon-loader.js';
 import ChevronLeft20 from '@carbon/icons/es/chevron--left/20.js';
 import ChevronRight20 from '@carbon/icons/es/chevron--right/20.js';
 import HostListener from '@carbon/web-components/es/globals/decorators/host-listener.js';
@@ -817,7 +818,7 @@ class C4DTableOfContents extends MediaQueryMixin(
                         aria-hidden="true"
                         class="${chevronRightContainerClasses}"
                         @click="${paginateLeft}">
-                        ${ChevronLeft20()}
+                        ${iconLoader(ChevronLeft20)}
                       </button>
                     `
                   : html`
@@ -827,7 +828,7 @@ class C4DTableOfContents extends MediaQueryMixin(
                         aria-hidden="true"
                         class="${chevronLeftContainerClasses}"
                         @click="${paginateLeft}">
-                        ${ChevronLeft20()}
+                        ${iconLoader(ChevronLeft20)}
                       </button>
                     `}
               `
@@ -917,7 +918,7 @@ class C4DTableOfContents extends MediaQueryMixin(
                         aria-hidden="true"
                         class="${chevronLeftContainerClasses}"
                         @click="${paginateRight}">
-                        ${ChevronRight20()}
+                        ${iconLoader(ChevronRight20)}
                       </button>
                     `
                   : html`
@@ -927,7 +928,7 @@ class C4DTableOfContents extends MediaQueryMixin(
                         aria-hidden="true"
                         class="${chevronRightContainerClasses}"
                         @click="${paginateRight}">
-                        ${ChevronRight20()}
+                        ${iconLoader(ChevronRight20)}
                       </button>
                     `}
               `

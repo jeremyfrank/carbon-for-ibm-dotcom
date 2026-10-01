@@ -9,6 +9,7 @@
 
 import { LitElement, html } from 'lit';
 import { property } from 'lit/decorators.js';
+import iconLoader from '@carbon/web-components/es/globals/internal/icon-loader.js';
 import ArrowRight24 from '@carbon/icons/es/arrow--right/24.js';
 import ArrowLeft24 from '@carbon/icons/es/arrow--left/24.js';
 import HostListenerMixin from '@carbon/web-components/es/globals/mixins/host-listener.js';
@@ -54,8 +55,8 @@ class C4DMegaMenuHeading extends HostListenerMixin(LitElement) {
   protected get _arrowIcon() {
     const isRTL = document.dir.toLowerCase() === 'rtl';
     return isRTL
-      ? ArrowLeft24({ part: 'l0-heading-arrow' })
-      : ArrowRight24({ part: 'l0-heading-arrow' });
+      ? iconLoader(ArrowLeft24, { part: 'l0-heading-arrow' })
+      : iconLoader(ArrowRight24, { part: 'l0-heading-arrow' });
   }
 
   /**

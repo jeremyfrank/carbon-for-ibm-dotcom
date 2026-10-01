@@ -11,6 +11,7 @@ import { html } from 'lit';
 import { action } from '@storybook/addon-actions';
 import { boolean, select } from '@storybook/addon-knobs';
 import ArrowRight20 from '@carbon/icons/es/arrow--right/20.js';
+import iconLoader from '@carbon/web-components/es/globals/internal/icon-loader.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
 import textNullable from '../../../../.storybook/knob-text-nullable';
 import { EXPRESSIVE_MODAL_SIZE } from '../defs';
@@ -59,7 +60,7 @@ export const Default = (args) => {
       </c4d-expressive-modal-body>
       <c4d-expressive-modal-footer>
         <c4d-button href="https://www.example.com">
-          ${buttonContent}${ArrowRight20({ slot: 'icon' })}
+          ${buttonContent}${iconLoader(ArrowRight20, { slot: 'icon' })}
         </c4d-button>
       </c4d-expressive-modal-footer>
     </c4d-expressive-modal>

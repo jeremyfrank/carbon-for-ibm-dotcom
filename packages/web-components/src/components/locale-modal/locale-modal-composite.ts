@@ -11,6 +11,7 @@ import { LitElement, html } from 'lit';
 import { property } from 'lit/decorators.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
 import LocaleAPI from '@carbon/ibmdotcom-services/es/services/Locale/Locale.js';
+import iconLoader from '@carbon/web-components/es/globals/internal/icon-loader.js';
 import ArrowRight20 from '@carbon/icons/es/arrow--right/20.js';
 import Error20 from '@carbon/icons/es/error/20.js';
 import settings from '@carbon/ibmdotcom-utilities/es/utilities/settings/settings.js';
@@ -208,11 +209,11 @@ class C4DLocaleModalComposite extends HostListenerMixin(
                   class="${c4dPrefix}--region-item-footer"
                   ?disabled="${isInvalid}">
                   ${isInvalid
-                    ? Error20({
+                    ? iconLoader(Error20, {
                         slot: 'icon',
                         class: `${c4dPrefix}--card__cta`,
                       })
-                    : ArrowRight20({
+                    : iconLoader(ArrowRight20, {
                         slot: 'icon',
                         class: `${c4dPrefix}--card__cta`,
                       })}

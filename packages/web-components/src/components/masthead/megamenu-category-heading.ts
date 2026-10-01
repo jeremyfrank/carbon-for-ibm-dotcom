@@ -8,6 +8,7 @@
  */
 
 import { property } from 'lit/decorators.js';
+import iconLoader from '@carbon/web-components/es/globals/internal/icon-loader.js';
 import ArrowRight20 from '@carbon/icons/es/arrow--right/20.js';
 import ArrowLeft20 from '@carbon/icons/es/arrow--left/20.js';
 import settings from '@carbon/ibmdotcom-utilities/es/utilities/settings/settings.js';
@@ -28,8 +29,8 @@ class C4DMegaMenuCategoryHeading extends C4DMegaMenuHeading {
   protected get _arrowIcon() {
     const isRTL = document.dir.toLowerCase() === 'rtl';
     return isRTL
-      ? ArrowLeft20({ part: 'l0-arrow-cat-heading' })
-      : ArrowRight20({ part: 'l0-arrow-cat-heading' });
+      ? iconLoader(ArrowLeft20, { part: 'l0-arrow-cat-heading' })
+      : iconLoader(ArrowRight20, { part: 'l0-arrow-cat-heading' });
   }
 
   @property({ reflect: true, type: Number, attribute: 'heading-level' })
