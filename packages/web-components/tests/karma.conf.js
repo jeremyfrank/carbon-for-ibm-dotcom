@@ -113,6 +113,7 @@ module.exports = function setupKarma(config) {
                   __dirname,
                   /__tests__/,
                   path.resolve(__dirname, '../node_modules'),
+                  path.resolve(__dirname, '../../..', 'node_modules'),
                 ],
                 enforce: 'post',
                 use: {
@@ -124,7 +125,14 @@ module.exports = function setupKarma(config) {
               },
           {
             test: /\.js$/,
-            include: [__dirname, path.dirname(require.resolve('lit'))],
+            include: [
+              __dirname,
+              path.dirname(require.resolve('lit')),
+              path.resolve(__dirname, '../../..', 'node_modules/@lit'),
+              path.resolve(__dirname, '../../..', 'node_modules/@carbon/web-components'),
+              path.resolve(__dirname, '../../..', 'node_modules/@carbon/motion'),
+              path.resolve(__dirname, '../../..', 'node_modules/@carbon/type'),
+            ],
             use: {
               loader: 'babel-loader',
               options: {

@@ -120,6 +120,8 @@
     "@babel/core": "~7.28.0",
     "@babel/plugin-proposal-decorators": "~7.28.0",
     "@babel/plugin-transform-class-properties": "~7.28.0",
+    "@babel/plugin-transform-class-static-block": "~7.28.0",
+    "@babel/plugin-transform-logical-assignment-operators": "~7.28.0",
     "@babel/plugin-transform-modules-commonjs": "~7.28.0",
     "@babel/plugin-transform-nullish-coalescing-operator": "~7.28.0",
     "@babel/plugin-transform-object-rest-spread": "~7.28.0",
