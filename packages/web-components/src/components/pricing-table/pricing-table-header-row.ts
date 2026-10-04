@@ -36,6 +36,9 @@ class C4DPricingTableHeaderRow extends StableSelectorMixin(
   }
 
   protected _handleSlotChange(e) {
+    if (!e.target) {
+      return;
+    }
     setColumnWidth(this);
 
     // Find cells that are eligible to have tags within them.

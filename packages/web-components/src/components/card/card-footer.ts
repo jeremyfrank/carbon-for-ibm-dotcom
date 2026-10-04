@@ -62,7 +62,7 @@ class C4DCardFooter extends C4DLinkWithIcon {
    * Handles `slotchange` event on the default `<slot>`.
    */
   protected _handleSlotChange({ target }: Event) {
-    if (!(target as HTMLSlotElement).name) {
+    if (!target || !(target as HTMLSlotElement).name) {
       const hasContent = (target as HTMLSlotElement)
         .assignedNodes()
         .some(

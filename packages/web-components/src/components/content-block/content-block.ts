@@ -125,6 +125,9 @@ class C4DContentBlock extends StableSelectorMixin(LitElement) {
    * @param event.target The event target.
    */
   protected _handleSlotChange({ target }: Event) {
+    if (!target) {
+      return;
+    }
     const { name } = target as HTMLSlotElement;
     const hasContent = (target as HTMLSlotElement)
       .assignedNodes()

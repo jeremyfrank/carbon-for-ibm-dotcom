@@ -28,6 +28,9 @@ const { prefix, stablePrefix: c4dPrefix } = settings;
 @customElement(`${c4dPrefix}-link-list-section`)
 class C4DLinkListSection extends StableSelectorMixin(C4DContentSection) {
   _handleSlotChange = (event: Event) => {
+    if (!event.target) {
+      return;
+    }
     const slot = (event.target as HTMLSlotElement)
       .assignedElements()
       .filter(

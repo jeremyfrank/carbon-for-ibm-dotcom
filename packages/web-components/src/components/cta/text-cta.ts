@@ -43,6 +43,9 @@ class C4DTextCTA extends VideoCTAMixin(CTAMixin(C4DLinkWithIcon)) {
    * Handles `slotchange` event on the default `<slot>`.
    */
   protected _handleSlotChange({ target }: Event) {
+    if (!target) {
+      return;
+    }
     this._hasContent = (target as HTMLSlotElement)
       .assignedNodes()
       .some(

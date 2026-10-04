@@ -29,6 +29,9 @@ class C4DButtonGroup extends StableSelectorMixin(LitElement) {
    * @private
    */
   private _handleSlotChange(event: Event) {
+    if (!event.target) {
+      return;
+    }
     const childItems = (event.target as HTMLSlotElement)
       .assignedNodes()
       .filter((elem) => (elem as HTMLElement).matches !== undefined);

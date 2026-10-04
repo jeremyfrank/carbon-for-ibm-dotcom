@@ -108,7 +108,8 @@ describe('c4d-search-with-typeahead', function () {
         ) as HTMLElement
       ).click();
       expect(search.active).toBe(true);
-      await Promise.resolve();
+      // Wait for Lit's async update chain: active flag → re-render → focus()
+      await new Promise((r) => setTimeout(r));
       // The `<input>` for the search box isn't rendered unless it's activated
       const searchInputNode = search.shadowRoot!.querySelector(
         '.cds--header__search--input'

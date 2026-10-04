@@ -405,6 +405,9 @@ class C4DTableOfContents extends MediaQueryMixin(
    * @param event The event.
    */
   private _handleSlotChange(event: Event) {
+    if (!event.target) {
+      return;
+    }
     // Handle changes to immediate slotted children.
     const slottedElements = (event.target as HTMLSlotElement)
       .assignedNodes()

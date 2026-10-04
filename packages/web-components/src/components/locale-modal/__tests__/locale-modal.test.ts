@@ -81,9 +81,13 @@ describe('c4d-locale-modal', function () {
         }),
         document.body
       );
-      await Promise.resolve();
-      (document.body.querySelector('c4d-region-item') as HTMLElement).click();
-      await Promise.resolve();
+      const regionItem = document.body.querySelector(
+        'c4d-region-item'
+      ) as HTMLElement & { updateComplete: Promise<void> };
+      await regionItem.updateComplete;
+      regionItem.click();
+      const localeModal = document.body.querySelector('c4d-locale-modal') as any;
+      await localeModal.updateComplete;
       const localeSearch = document.body.querySelector('c4d-locale-search');
       expect((localeSearch as C4DLocaleSearch).region).toBe('region-foo');
     });
@@ -100,16 +104,19 @@ describe('c4d-locale-modal', function () {
         }),
         document.body
       );
-      await Promise.resolve();
-      (document.body.querySelector('c4d-region-item') as HTMLElement).click();
-      await Promise.resolve();
-      const localeModal = document.body.querySelector('c4d-locale-modal');
+      const regionItem = document.body.querySelector(
+        'c4d-region-item'
+      ) as HTMLElement & { updateComplete: Promise<void> };
+      await regionItem.updateComplete;
+      regionItem.click();
+      const localeModal = document.body.querySelector('c4d-locale-modal') as any;
+      await localeModal.updateComplete;
       (
         localeModal!.shadowRoot!.querySelector(
           'c4d-link-with-icon'
         ) as HTMLElement
       ).click();
-      await Promise.resolve();
+      await localeModal.updateComplete;
       expect(
         localeModal!.shadowRoot!.querySelector('c4d-link-with-icon')
       ).toBeNull();

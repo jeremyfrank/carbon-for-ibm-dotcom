@@ -62,6 +62,9 @@ class C4DImage extends StableSelectorMixin(
    * Handles `slotchange` event.
    */
   private _handleSlotChange({ target }: Event) {
+    if (!target) {
+      return;
+    }
     const { selectorItem } = this.constructor as typeof C4DImage;
     this._images = (target as HTMLSlotElement)
       .assignedNodes()

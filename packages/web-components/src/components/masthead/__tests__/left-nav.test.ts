@@ -50,12 +50,17 @@ describe('c4d-left-nav', function () {
     });
 
     it('should warn wrong usage mode', async function () {
+      // Render with default (header-nav) first so the element is fully initialised
+      render(template(), document.body);
+      const leftNav = document.body.querySelector('c4d-left-nav') as any;
+      await leftNav.updateComplete;
+      // Now install the spy and change usageMode so updated() fires with changedProperties
+      spyOn(console, 'warn');
       render(
         template({ usageMode: SIDE_NAV_USAGE_MODE.REGULAR }),
         document.body
       );
-      spyOn(console, 'warn');
-      await Promise.resolve();
+      await leftNav.updateComplete;
       // eslint-disable-next-line no-console
       expect(console.warn).toHaveBeenCalledWith(
         'c4d-left-nav supports only `header-nav` for its `usage-mode` attribute or `usageMode` property. The value is ignored:',

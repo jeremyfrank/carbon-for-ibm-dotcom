@@ -36,6 +36,9 @@ class C4DLegalNavCookiePreferencesPlaceholder extends StableSelectorMixin(
    * Handles `slotchange` event.
    */
   private _handleSlotChange(event: Event) {
+    if (!event.target) {
+      return;
+    }
     // Finds new injected links
     const linkNodes = (event.target as HTMLSlotElement)
       .assignedNodes()

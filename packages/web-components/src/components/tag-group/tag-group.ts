@@ -28,6 +28,9 @@ class C4DTagGroup extends StableSelectorMixin(LitElement) {
    * @private
    */
   private _handleSlotChange(event: Event) {
+    if (!event.target) {
+      return;
+    }
     const childItems = (event.target as HTMLSlotElement).assignedNodes();
 
     const carbonTags = childItems.filter((elem) =>

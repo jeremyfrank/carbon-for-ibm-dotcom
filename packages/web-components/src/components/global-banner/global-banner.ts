@@ -74,6 +74,9 @@ class C4DGlobalBanner extends StableSelectorMixin(LitElement) {
    * Handles `slotchange` event on the cta `<slot>`.
    */
   protected _handleImageSlotChange({ target }: Event) {
+    if (!target) {
+      return;
+    }
     this.hasImage = (target as HTMLSlotElement)
       .assignedNodes()
       .some(
@@ -89,6 +92,9 @@ class C4DGlobalBanner extends StableSelectorMixin(LitElement) {
    * Handles `slotchange` event on the cta `<slot>`.
    */
   protected _handleButtonSlotChange({ target }: Event) {
+    if (!target) {
+      return;
+    }
     const hasContent = (target as HTMLSlotElement)
       .assignedNodes()
       .filter((elem) =>

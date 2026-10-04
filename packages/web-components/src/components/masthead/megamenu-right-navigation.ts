@@ -60,6 +60,9 @@ class C4DMegaMenuRightNavigation extends StableSelectorMixin(LitElement) {
    * @param event Event
    */
   protected _handleSlotChange(event: Event) {
+    if (!event.target) {
+      return;
+    }
     const { onlyChildClassName } = this
       .constructor as typeof C4DMegaMenuRightNavigation;
     const children = (event.target as HTMLSlotElement).assignedElements();
@@ -74,12 +77,12 @@ class C4DMegaMenuRightNavigation extends StableSelectorMixin(LitElement) {
   }
 
   updated() {
-    const hasViewAll =
-      (
-        this.shadowRoot?.querySelector(
-          'slot[name="view-all"]'
-        ) as HTMLSlotElement
-      ).assignedElements().length > 0;
+    const viewAllSlot = this.shadowRoot?.querySelector(
+      'slot[name="view-all"]'
+    ) as HTMLSlotElement | null;
+    const hasViewAll = viewAllSlot
+      ? viewAllSlot.assignedElements().length > 0
+      : false;
     this.shadowRoot
       ?.querySelector(`.${prefix}--masthead__megamenu-container`)
       ?.classList.toggle(

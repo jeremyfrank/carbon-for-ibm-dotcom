@@ -85,6 +85,9 @@ class C4DCTABlock extends StableSelectorMixin(C4DContentBlock) {
    */
   protected _handleSlotChange(event: Event) {
     const { target } = event;
+    if (!target) {
+      return;
+    }
     const { name } = target as HTMLSlotElement;
 
     if (!slotExistencePropertyNames[name]) {

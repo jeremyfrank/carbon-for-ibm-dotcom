@@ -45,6 +45,9 @@ class C4DCardGroup extends MediaQueryMixin(
    * @private
    */
   private _handleSlotChange(event: Event) {
+    if (!event.target) {
+      return;
+    }
     this._childItems = (event.target as HTMLSlotElement)
       .assignedNodes()
       .filter((elem) =>

@@ -41,6 +41,9 @@ class C4DLeavingIbmModal extends StableSelectorMixin(CDSModal) {
   @HostListener('shadowRoot:slotchange')
   // @ts-ignore: The decorator refers to this method but TS thinks this method is not referred to
   private _handleShadowRootSlotChange = (event: Event) => {
+    if (!event.target) {
+      return;
+    }
     const { selectorHeading } = this.constructor as typeof C4DLeavingIbmModal;
     if (!this.hasAttribute('aria-labelledby')) {
       const headingNode = (event.target as HTMLSlotElement)

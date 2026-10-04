@@ -72,6 +72,9 @@ class C4DLightboxMediaViewer extends C4DLightboxMediaViewerBody {
   private _ctaContents?: HTMLElement;
 
   private _handleSlotChange(event: Event) {
+    if (!event.target) {
+      return;
+    }
     const { _containingModal: containingModal } = this;
     const [media] = (event.target as HTMLSlotElement).assignedNodes();
     this._mediaItem = media as HTMLImageElement | C4DVideoPlayerContainer;

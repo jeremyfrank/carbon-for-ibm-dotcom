@@ -38,6 +38,9 @@ class C4DMasthead extends StableSelectorMixin(LitElement) {
    * Re-initializes masthead component with StickyHeader class in case of L1 addition/removal.
    */
   handleL1Change({ target }) {
+    if (!target) {
+      return;
+    }
     const L1Navs = (target as HTMLSlotElement)
       .assignedElements()
       .filter(

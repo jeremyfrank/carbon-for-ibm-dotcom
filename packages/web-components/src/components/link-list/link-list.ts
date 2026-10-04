@@ -64,6 +64,9 @@ class C4DLinkList extends StableSelectorMixin(LitElement) {
    * @private
    */
   private _handleSlotChange(event: Event) {
+    if (!event.target) {
+      return;
+    }
     const { selectorItem } = this.constructor as typeof C4DLinkList;
     this._childItems = (event.target as HTMLSlotElement)
       .assignedNodes({ flatten: true })

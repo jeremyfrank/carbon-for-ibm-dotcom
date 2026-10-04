@@ -60,13 +60,13 @@ describe('c4d-carousel', function () {
 
     it('should set the scroll position', async function () {
       render(template({ pageSize: 2, start: 1 }), document.body);
-      await Promise.resolve();
       const carousel = document.querySelector('c4d-carousel') as C4DCarousel;
-      await Promise.resolve(); // Update cycle for `<c4d-carousel>`
-      await Promise.resolve(); // The update cycle that fires `slotchange` event
+      await new Promise((r) => setTimeout(r));
+      await carousel.updateComplete;
       (carousel as any)._contentsBaseWidth = 700;
       (carousel as any)._gap = 100;
-      await Promise.resolve();
+      await new Promise((r) => setTimeout(r));
+      await carousel.updateComplete;
       expect(
         (
           carousel!.shadowRoot!.querySelector(
@@ -78,8 +78,10 @@ describe('c4d-carousel', function () {
 
     it('should enable/disable the previous button based on the starting position', async function () {
       render(template({ start: 0 }), document.body);
-      await Promise.resolve();
       const carousel = document.querySelector('c4d-carousel') as C4DCarousel;
+      // Wait for initial render + slotchange-triggered re-render
+      await new Promise((r) => setTimeout(r));
+      await carousel.updateComplete;
       expect(
         (
           carousel!.shadowRoot!.querySelector(
@@ -88,7 +90,7 @@ describe('c4d-carousel', function () {
         ).disabled
       ).toBe(true);
       carousel.start = 1;
-      await Promise.resolve();
+      await carousel.updateComplete;
       expect(
         (
           carousel!.shadowRoot!.querySelector(
@@ -113,10 +115,10 @@ describe('c4d-carousel', function () {
         }),
         document.body
       );
-      await Promise.resolve(); // Update cycle for `<c4d-carousel>`
-      await Promise.resolve(); // The update cycle that fires `slotchange` event
-      await Promise.resolve(); // The update cycle that updates content upon `slotchange` event
       const carousel = document.querySelector('c4d-carousel') as C4DCarousel;
+      // Wait for initial render + slotchange-triggered re-render
+      await new Promise((r) => setTimeout(r));
+      await carousel.updateComplete;
       expect(
         (
           carousel!.shadowRoot!.querySelector(
@@ -125,7 +127,7 @@ describe('c4d-carousel', function () {
         ).disabled
       ).toBe(false);
       carousel.start = 3;
-      await Promise.resolve();
+      await carousel.updateComplete;
       expect(
         (
           carousel!.shadowRoot!.querySelector(
@@ -150,21 +152,21 @@ describe('c4d-carousel', function () {
         }),
         document.body
       );
-      await Promise.resolve(); // Update cycle for `<c4d-carousel>`
-      await Promise.resolve(); // The update cycle that fires `slotchange` event
-      await Promise.resolve(); // The update cycle that updates content upon `slotchange` event
       const carousel = document.body.querySelector(
         'c4d-carousel'
       ) as C4DCarousel;
+      // Wait for initial render + slotchange-triggered re-render
+      await new Promise((r) => setTimeout(r));
+      await carousel.updateComplete;
       const navigation = carousel!.shadowRoot!.querySelector(
         '.cds--carousel__navigation'
       );
       expect(navigation!.textContent!.trim()).toBe('1 / 2');
       carousel.start = 1;
-      await Promise.resolve();
+      await carousel.updateComplete;
       expect(navigation!.textContent!.trim()).toBe('2 / 3');
       carousel.start = 3;
-      await Promise.resolve();
+      await carousel.updateComplete;
       expect(navigation!.textContent!.trim()).toBe('2 / 2');
     });
 
@@ -185,18 +187,18 @@ describe('c4d-carousel', function () {
         }),
         document.body
       );
-      await Promise.resolve(); // Update cycle for `<c4d-carousel>`
-      await Promise.resolve(); // The update cycle that fires `slotchange` event
-      await Promise.resolve(); // The update cycle that updates content upon `slotchange` event
       const carousel = document.body.querySelector(
         'c4d-carousel'
       ) as C4DCarousel;
+      // Wait for initial render + slotchange-triggered re-render
+      await new Promise((r) => setTimeout(r));
+      await carousel.updateComplete;
       const navigation = carousel!.shadowRoot!.querySelector(
         '.cds--carousel__navigation'
       );
       expect(navigation!.textContent!.trim()).toBe('1 in 2');
       carousel.start = 3;
-      await Promise.resolve();
+      await carousel.updateComplete;
       expect(navigation!.textContent!.trim()).toBe('2 in 2');
     });
   });
@@ -278,12 +280,12 @@ describe('c4d-carousel', function () {
         }),
         document.body
       );
-      await Promise.resolve(); // Update cycle for `<c4d-carousel>`
-      await Promise.resolve(); // The update cycle that fires `slotchange` event
-      await Promise.resolve(); // The update cycle that updates content upon `slotchange` event
       const carousel = document.body.querySelector(
         'c4d-carousel'
       ) as C4DCarousel;
+      // Wait for initial render + slotchange-triggered re-render
+      await new Promise((r) => setTimeout(r));
+      await carousel.updateComplete;
       (
         carousel!.shadowRoot!.querySelector(
           '[part="next-button"]'

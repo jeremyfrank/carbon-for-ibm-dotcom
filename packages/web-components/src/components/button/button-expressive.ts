@@ -75,6 +75,9 @@ class C4DButtonExpressive extends FocusMixin(StableSelectorMixin(LitElement)) {
    * Handles `slotchange` event.
    */
   protected _handleSlotChange({ target }: Event) {
+    if (!target) {
+      return;
+    }
     const { name } = target as HTMLSlotElement;
     const hasContent = (target as HTMLSlotElement)
       .assignedNodes()

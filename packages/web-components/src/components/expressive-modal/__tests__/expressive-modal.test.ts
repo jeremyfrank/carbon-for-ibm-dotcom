@@ -260,8 +260,8 @@ describe('c4d-expressive-modal', function () {
 
     beforeEach(async function () {
       render(template({ open: true }), document.body);
-      await Promise.resolve();
-      elem = document.querySelector('c4d-expressive-modal');
+      elem = document.querySelector('c4d-expressive-modal') as any;
+      await (elem as any).updateComplete;
     });
 
     it('Should close the modal', async function () {

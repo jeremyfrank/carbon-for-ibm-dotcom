@@ -39,6 +39,9 @@ class C4DContentSection extends StableSelectorMixin(LitElement) {
    * @private
    */
   private handleSlotChange(event: Event) {
+    if (!event.target) {
+      return;
+    }
     const childItems = (event.target as HTMLSlotElement)
       .assignedNodes()
       .filter(

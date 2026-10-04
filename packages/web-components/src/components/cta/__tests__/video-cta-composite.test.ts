@@ -40,13 +40,14 @@ describe('c4d-video-cta-composite', function () {
       await Promise.resolve();
       const videoCTAComposite = document.querySelector(
         'c4d-video-cta-composite'
-      );
+      ) as any;
+      await videoCTAComposite.updateComplete;
       videoCTAComposite!.dispatchEvent(
         new CustomEvent('c4d-cta-run-action', {
           detail: { ctaType: 'video', href: '0_ibuqxqbe' },
         })
       );
-      await Promise.resolve(); // Update cycle for `<c4d-video-cta-composite>`
+      await videoCTAComposite.updateComplete; // Update cycle for `<c4d-video-cta-composite>`
       await Promise.resolve(); // Update cycle for `<c4d-lightbox-video-player-composite>`
       const { modalRenderRoot } = document.querySelector(
         'c4d-video-cta-composite'

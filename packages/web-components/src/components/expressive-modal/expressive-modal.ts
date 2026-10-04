@@ -291,6 +291,9 @@ class C4DExpressiveModal extends StableSelectorMixin(
    * Handles `slotchange` event.
    */
   private _handleSlotChange({ target }: Event) {
+    if (!target) {
+      return;
+    }
     const { name } = target as HTMLSlotElement;
     const hasContent = (target as HTMLSlotElement)
       .assignedNodes()

@@ -407,6 +407,9 @@ class C4DCarousel extends HostListenerMixin(StableSelectorMixin(LitElement)) {
    */
   private _handleSlotChange(event: Event) {
     const slot = event.target as HTMLSlotElement;
+    if (!slot) {
+      return;
+    }
     const { name } = slot;
     if (!name) {
       this._total = slot

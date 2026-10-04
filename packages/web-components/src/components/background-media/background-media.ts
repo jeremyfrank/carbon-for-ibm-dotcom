@@ -111,9 +111,12 @@ class C4DBackgroundMedia extends C4DImage {
    * Conditionally runs super.render() if all children are `c4d-image-item`
    */
   private _handleBackgroundMedia(event: Event) {
+    if (!event.target) {
+      return;
+    }
     const assignedElements = (
       event.target as HTMLSlotElement
-    )?.assignedElements();
+    ).assignedElements();
     const assignedImages = assignedElements.filter(
       (el) => el.tagName === `${c4dPrefix}-image-item`.toUpperCase()
     );

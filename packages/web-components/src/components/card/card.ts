@@ -95,6 +95,9 @@ class C4DCard extends CTAMixin(StableSelectorMixin(CDSLink)) {
    * Handles `slotchange` event for slots other than the copy slot.
    */
   protected _handleSlotChange({ target }: Event) {
+    if (!target) {
+      return;
+    }
     const { name } = target as HTMLSlotElement;
     this[slotExistencePropertyNames[name]] = (target as HTMLSlotElement)
       .assignedNodes()
@@ -107,6 +110,9 @@ class C4DCard extends CTAMixin(StableSelectorMixin(CDSLink)) {
    * Handles `slotchange` event for the copy slot.
    */
   protected _handleCopySlotChange({ target }: Event) {
+    if (!target) {
+      return;
+    }
     this._hasCopy = (target as HTMLSlotElement)
       .assignedNodes()
       .some(

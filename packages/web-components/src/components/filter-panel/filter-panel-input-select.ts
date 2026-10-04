@@ -166,6 +166,9 @@ class C4DFilterPanelInputSelect extends FocusMixin(
    * @param event.target The event target.
    */
   protected _handleSlotChange({ target }: Event) {
+    if (!target) {
+      return;
+    }
     this._items = (target as HTMLSlotElement)
       .assignedNodes()
       .filter(

@@ -63,6 +63,9 @@ class C4DLinkWithIcon extends CTAMixin(StableSelectorMixin(CDSLink)) {
    * Handles `slotchange` event on the default `<slot>`.
    */
   protected _handleSlotChange({ target }: Event) {
+    if (!target) {
+      return;
+    }
     this._hasContent = (target as HTMLSlotElement)
       .assignedNodes()
       .some(

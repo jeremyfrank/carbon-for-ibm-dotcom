@@ -347,6 +347,9 @@ class C4DFilterPanelComposite extends MediaQueryMixin(
    * @param event.target The event target.
    */
   protected _handleSlotChange({ target }: Event) {
+    if (!target) {
+      return;
+    }
     this._contents = (target as HTMLSlotElement)
       .assignedNodes()
       .filter(

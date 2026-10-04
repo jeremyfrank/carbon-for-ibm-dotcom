@@ -66,6 +66,9 @@ class C4DTile extends VideoCTAMixin(CTAMixin(LitElement)) {
 
   _handleSlotChange(event: Event) {
     const { target } = event;
+    if (!target) {
+      return;
+    }
     this.slotName = (target as HTMLSlotElement).name;
     this.slotContent = (target as HTMLSlotElement).assignedElements();
 

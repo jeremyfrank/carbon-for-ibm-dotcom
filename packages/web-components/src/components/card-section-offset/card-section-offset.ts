@@ -28,6 +28,9 @@ const { prefix, stablePrefix: c4dPrefix } = settings;
 @customElement(`${c4dPrefix}-card-section-offset`)
 class C4DCardSectionOffset extends StableSelectorMixin(C4DContentBlock) {
   protected _handleSlotChangeCardGroup(event: Event) {
+    if (!event.target) {
+      return;
+    }
     const childItems = (event.target as HTMLSlotElement).assignedNodes();
 
     childItems.filter((elem) => {
