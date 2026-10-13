@@ -33,11 +33,11 @@
     "@carbon/icons-react": "11.80.0",
     "@carbon/layout": "12.0.0-alpha.2",
     "@carbon/styles": "2.0.0-alpha.3",
-    "@carbon/type": "11.56.0",
+    "@carbon/type": "12.0.0-alpha.2",
     "@ibm/telemetry-js": "^1.5.0"
   },
   "devDependencies": {
-    "@carbon/themes": "11.73.0",
+    "@carbon/themes": "12.0.0-alpha.3",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
